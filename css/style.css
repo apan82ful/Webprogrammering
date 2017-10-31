@@ -1,0 +1,123 @@
+body {
+    font-family: Helvetica Arial SansSerif;
+    background-color: #000000;
+}
+    h1, h2{
+        color: #eeeeee;
+    }
+    p{
+        color: #eeeeee;
+    }
+    ul{
+        color: #eeeeee;
+    }
+.start_img{
+    max-width: 100%;
+    height: auto;
+}
+.start_icon{
+    width: 25px;
+    height: 25px;
+
+}
+.center_img{
+    margin: 0 auto;
+    display: block;
+}
+.standardmargin{
+    margin-bottom: 50px;
+}
+.marginfooter{
+    margin-top: 200px;
+}
+.nav_list{
+
+    margin: 20px auto 20px auto;
+    border: 2px solid #a4a4a4;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+footer{
+    display: block;
+    background-color: #eeeeee;
+}
+footer p{
+    color: #111111;
+}
+article a{
+    color: #eeeeee;
+}
+table {
+    font-family: Helvetica, arial, sans-serif;
+    border: solid #a4a4a4;
+    background-color: #eeeeee;
+    text-align: left;
+    border-radius: 5px;
+
+}
+td th{
+    text-align: left;
+    border: solid #a4a4a4;
+    padding: 10px;
+    background-color: #eeeeee;
+
+}
+tr:nth-child(even){
+    color: #a4a4a4;
+
+}
+fieldset{
+
+    border: 2px solid #a4a4a4;
+    border-radius: 5px;
+}
+label{
+color: #eeeeee;
+}
+form{
+display: block;
+
+
+}
+
+
+
+@media (max-width: 400px) { /* Ökar storleken för mobile för att göra det mer lättläst */
+    p{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    a{
+        font-size: 18px;
+    }
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav.nav_list{ /* Centerar navigeringsmenyn */
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    nav.nav_list ul li{
+        display: inline; /* Visar menyn som inline */
+        padding: 10px;
+
+    }
+}
+/* Desktop */
+@media (min-width: 1025px) {
+    nav.nav_list{
+        text-align: center; /* Centerar navigeringsmenyn */
+        margin-bottom: 25px;
+    }
+    nav.nav_list ul li{
+        display: inline; /* Visar menyn som inline */
+        padding: 10px;
+    }
+    nav li a{
+
+        color: #111111;
+    }
+}
+

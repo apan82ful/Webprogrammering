@@ -11,6 +11,11 @@ body {
     ul{
         color: #eeeeee;
     }
+
+    .test {
+        color: red;
+    }
+
 .start_img{
     max-width: 100%;
     height: auto;
@@ -53,6 +58,7 @@ table {
     background-color: #eeeeee;
     text-align: left;
     border-radius: 5px;
+    width: 500px;
 
 }
 td th{

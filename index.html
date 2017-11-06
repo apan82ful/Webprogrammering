@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="newport" content="width=device-width, initial-scale=1.0" i>
     <title>Title</title>
     <link href="css/unsemantic-grid-responsive-tablet.css" type="text/css" rel="stylesheet"/>
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
+
 </head>
 
 <body>
@@ -13,6 +15,8 @@
     <header class="grid-100 tablet-grid-100 mobile-grid-100 standardmargin">
         <img src="images/brant-bjork-svartvit-bred.gif" class="start_img center_img"/>
         <nav class="nav_list">
+            <label class="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About">About</a></li>
@@ -28,45 +32,42 @@
 
         <article class="grid-50 mobile-grid-100 standardmargin">
             <h1>Brant bjork</h1>
-            <p>Brant bjork är en Amerikansk trummis, gitarrist, sångare och producent. <a href="https://sv.wikipedia.org/wiki/Brant_Bjork">Läs vidare</a> </p>
+            <p>Brant bjork är en Amerikansk trummis, gitarrist, sångare och producent. <a
+                    href="https://sv.wikipedia.org/wiki/Brant_Bjork">Läs vidare</a></p>
 
         </article>
         <div class="clear"></div>
 
         <article class="grid 100 tablet-grid-100 mobile-grid-100">
-        <h2>Skivor</h2>
+            <h2>Skivor</h2>
         </article>
 
 
-        <section class="grid-100 tablet-grid-100 mobile-grid-100 standardmargin">
+        <article class="grid-100 tablet-grid-100 mobile-grid-100 standardmargin">
+            <p id="output"></p>
+            <p id="outputForVote"></p>
+            <p id="outputForValidation"></p>
+            <p id="packageOutput">   </p>
 
-        <form action="http://www.example.com/login.php">
-            <fieldset>
-                <label>
-            Username:
-                <input type="text" name="username"/>
-                </label>
-                <br />
-                <p>Please vote for best album:
-                <br />
+            <form id="formAlbum">
+                <fieldset>
                     <label>
-                        <input type="radio" name="bestalbum" value="jalamanta" checked="checked" /> Jalamanta
+                        Username:
+                        <input type="text" id="userName" pattern="^[a-z0-9]{1,10}$" title="Det måste vara mellan 1 och 10" />
+                        Must be between 1-10
                     </label>
-                    <label>
-                        <input type="radio" name="bestalbum" value="savedbymagic" checked="checked"/> Saved By Magic
-                    </label>
-                    <label>
-                        <input type="radio" name="bestalbum" value="somerasol" checked="checked"/> Somera Sol
-                    </label>
-                </p>
-                <input type="submit" value="Submit">
-            </fieldset>
-
-        </form>
-
-        </section>
-
-
+                    <br/>
+                    <br/>
+                    <label for="package" class="selectbox"> Please vote for best album: </label>
+                    <select id="package" name="package">
+                        <option value="jalamanta">Jalamanta</option>
+                        <option value="savedByMagic">Saved By Magic</option>
+                        <option value="someraSol">Somera Sol</option>
+                    </select>
+                    <input type="submit" value="Submit" onclick="myValidation(), showVoteFor(selected)"/>
+                </fieldset>
+            </form>
+        </article>
 
         <article class="grid-33 mobile-grid-100">
             <a href="jalamanta.html"><img src="images/jalamanta.jpg" class="start_img" alt="jalamanta"/></a>
@@ -80,10 +81,14 @@
         </article>
     </section>
 </div>
+<button class="json-btn">Get JSON</button>
+<div class="album-output" style="display: none"></div>
 <footer class="marginfooter">
     <p>Posted by: Andreas Nielsen</p>
     <p>Contact information: <a href="mailto:andreasnielsen1982@gmail.com">andreasnielsen1982@gmail.com</a>.</p>
 </footer>
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
 
